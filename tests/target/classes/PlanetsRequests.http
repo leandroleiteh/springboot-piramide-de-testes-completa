@@ -1,0 +1,45 @@
+### POST planets
+POST http://localhost:8081/planets
+Content-Type: application/json
+
+{
+  "name": "saturno",
+  "climate": "frio",
+  "terrain": "mountain"
+}
+
+### Delete Planets
+DELETE http://localhost:8081/planets/4
+Content-Type: application/json
+
+
+
+### GET Planets
+GET http://localhost:8081/planets/4
+Content-Type: application/json
+
+
+### GET Planets
+GET http://localhost:8081/planets/name/marte
+Content-Type: application/json
+
+
+### GET All Planets With Filter (Climate and Terrain)
+GET http://localhost:8081/planets?terrain=rochedo&climate=seco
+Content-Type: application/json
+
+###
+GET http://localhost:8081/planets?climate=tropical
+Content-Type: application/json
+
+###
+GET http://localhost:8081/planets?terrain=rochedo
+Content-Type: application/json
+
+###
+GET http://localhost:8081/planets
+Content-Type: application/json
+
+
+
+###
