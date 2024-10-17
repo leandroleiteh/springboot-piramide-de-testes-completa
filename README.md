@@ -25,7 +25,13 @@
 - [AssertJ](https://github.com/assertj/assertj)
 - [Hamcrest](http://hamcrest.org/JavaHamcrest/)
 - [Jacoco](https://github.com/jacoco/jacoco)
-- [Pitest](https://pitest.org)
+- [Surfire](https://maven.apache.org/surefire/index.html)
+- [Failsafe](https://failsafe.dev/)
+- [TestcontainersTestcontainers](https://docs.spring.io/spring-boot/reference/testing/testcontainers.html)
+- [commons-lang3](https://mvnrepository.com/artifact/org.apache.commons/commons-lang3)
+
+
+
 
 ## 💻 Projeto
 
@@ -62,5 +68,7 @@ Para construir e testar, execute o comando:
 $ ./mvnw clean verify
 ```
 
+- [by Leandro Leite](https://www.linkedin.com/in/leandroleite-ti/)
 
-![Pit Test Mutation](image.png)
+
+![Pit Test Coverage Report](image-1.png)
