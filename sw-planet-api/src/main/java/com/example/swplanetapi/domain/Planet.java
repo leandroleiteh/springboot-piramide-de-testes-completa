@@ -1,11 +1,9 @@
 package com.example.swplanetapi.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 
+import com.example.swplanetapi.jacoco.ExcludeFromJacocoGeneratedReport;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 
 @Entity
@@ -15,8 +13,16 @@ public class Planet {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
 
+  @NotEmpty
+  @Column(nullable = false, unique = true)
   private String name;
+
+  @NotEmpty
+  @Column(nullable = false)
   private String climate;
+
+  @NotEmpty
+  @Column(nullable = false)
   private String terrain;
 
   public Planet() {
@@ -28,6 +34,13 @@ public class Planet {
   }
 
   public Planet(String name, String climate, String terrain) {
+    this.name = name;
+    this.climate = climate;
+    this.terrain = terrain;
+  }
+
+  public Planet(Long id, String name, String climate, String terrain) {
+    this.id = id;
     this.name = name;
     this.climate = climate;
     this.terrain = terrain;
@@ -68,5 +81,16 @@ public class Planet {
   @Override
   public boolean equals(Object obj) {
     return EqualsBuilder.reflectionEquals(obj, this);
+  }
+
+  @ExcludeFromJacocoGeneratedReport
+  @Override
+  public String toString() {
+    return "Planet{" +
+            "id=" + id +
+            ", name='" + name + '\'' +
+            ", climate='" + climate + '\'' +
+            ", terrain='" + terrain + '\'' +
+            '}';
   }
 }
