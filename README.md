@@ -61,3 +61,6 @@ Para construir e testar, execute o comando:
 ```sh
 $ ./mvnw clean verify
 ```
+
+
+![Pit Test Mutation](image.png)
