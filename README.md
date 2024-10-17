@@ -72,3 +72,5 @@ $ ./mvnw clean verify
 
 
 ![Pit Test Coverage Report](image-1.png)
+
+![sw-planet-api - Jacoco Coverage](image-2.png)
